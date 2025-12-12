@@ -19,6 +19,15 @@ const usuarios = [
       "https://i.imgur.com/EEEEE.png",
       "https://i.imgur.com/FFFFF.png"
     ]
+  },
+  {
+    cpf: "02330595042",
+    senha: "02330595042",
+    imagens: [
+      "https://i.ibb.co/MD4dvq79/Captura-de-tela-2025-12-12-160853.png",
+      "https://i.ibb.co/B2DCg1mR/Captura-de-tela-2025-12-12-160902.png",
+      "https://i.ibb.co/VW6ZKCF3/base-RGAPP3.png"
+    ]
   }
 ];
 
@@ -43,3 +52,4 @@ function fazerLogin() {
   // Vai para a página do RG
   window.location.href = "index_rg.html";
 }
+
