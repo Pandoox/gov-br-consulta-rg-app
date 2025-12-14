@@ -211,13 +211,13 @@ main, div, section, * {
     // Ctrl+Shift+I
     if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
       e.preventDefault();
-      window.location.href = "https://www.google.com";
+      window.location.href = "";
     }
 
     // Ctrl+U
     if (e.ctrlKey && e.key.toLowerCase() === "u") {
       e.preventDefault();
-      window.location.href = "https://www.google.com";
+      window.location.href = "";
     }
   });
 
@@ -233,7 +233,7 @@ main, div, section, * {
     Object.defineProperty(element, 'id', {
       get: function() {
         // Se o console estiver aberto, redireciona
-        window.location.href = "https://www.google.com";
+        window.location.href = "";
       }
     });
     console.log(element);
@@ -241,3 +241,4 @@ main, div, section, * {
   </script>
 </body>
 </html>
+
