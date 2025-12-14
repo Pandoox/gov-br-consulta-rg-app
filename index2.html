@@ -258,6 +258,31 @@ document.addEventListener('touchend', e => {
     setTimeout(() => location.reload(), 1000);
   }
 }, { passive: true });
+
+
+
+  // Bloqueia atalhos comuns de DevTools
+  document.addEventListener("keydown", function(e) {
+    // F12
+    if (e.key === "F12") {
+      e.preventDefault();
+    }
+
+    // Ctrl+Shift+I
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+      e.preventDefault();
+    }
+
+    // Ctrl+U
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+      e.preventDefault();
+    }
+  });
+
+  // Bloqueia clique direito (menu de contexto)
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
 </script>
 
 </body>
