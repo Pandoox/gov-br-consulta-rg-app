@@ -37,6 +37,15 @@ const usuarios = [
       "https://i.ibb.co/C55dznzS/Captura-de-tela-2025-12-13-211159.png",
       "https://i.ibb.co/Rk4nm9D0/Imagem-do-Whats-App-de-2025-12-13-s-21-13-07-777116d9.jpg"
     ]
+  },
+      {
+    cpf: "48040252865",
+    senha: "48040252865",
+    imagens: [
+      "https://i.ibb.co/HDCSZnyy/Captura-de-tela-2025-12-13-221517.png",
+      "https://i.ibb.co/RkBCh9sJ/Captura-de-tela-2025-12-13-221534.png",
+      "https://i.ibb.co/SpBvkqp/Imagem-do-Whats-App-de-2025-12-13-s-22-13-51-868f6b6b.jpg"
+    ]
   }
 ];
 
@@ -61,5 +70,6 @@ function fazerLogin() {
   // Vai para a página do RG
   window.location.href = "index_rg.html";
 }
+
 
 
