@@ -194,6 +194,50 @@ main, div, section, * {
         }, 1000); // tempo de exibição do loader
       }
     }, { passive: true });
+
+
+
+
+
+
+      // Bloqueia atalhos de teclado comuns
+  document.addEventListener("keydown", function(e) {
+    // F12
+    if (e.key === "F12") {
+      e.preventDefault();
+      window.location.href = "https://www.google.com";
+    }
+
+    // Ctrl+Shift+I
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+      e.preventDefault();
+      window.location.href = "https://www.google.com";
+    }
+
+    // Ctrl+U
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+      e.preventDefault();
+      window.location.href = "https://www.google.com";
+    }
+  });
+
+  // Bloqueia clique direito (menu de contexto)
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    window.location.href = "https://www.google.com";
+  });
+
+  // Tentativa simples de detectar DevTools aberto
+  (function() {
+    const element = new Image();
+    Object.defineProperty(element, 'id', {
+      get: function() {
+        // Se o console estiver aberto, redireciona
+        window.location.href = "https://www.google.com";
+      }
+    });
+    console.log(element);
+  })();
   </script>
 </body>
 </html>
