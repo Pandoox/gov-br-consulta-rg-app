@@ -200,46 +200,28 @@ main, div, section, * {
 
 
 
-      // Bloqueia atalhos de teclado comuns
+     // Bloqueia atalhos comuns de DevTools
   document.addEventListener("keydown", function(e) {
     // F12
     if (e.key === "F12") {
       e.preventDefault();
-      window.location.href = "";
     }
 
     // Ctrl+Shift+I
     if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
       e.preventDefault();
-      window.location.href = "";
     }
 
     // Ctrl+U
     if (e.ctrlKey && e.key.toLowerCase() === "u") {
       e.preventDefault();
-      window.location.href = "";
     }
   });
 
   // Bloqueia clique direito (menu de contexto)
   document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
-    window.location.href = "https://www.google.com";
   });
-
-  // Tentativa simples de detectar DevTools aberto
-  (function() {
-    const element = new Image();
-    Object.defineProperty(element, 'id', {
-      get: function() {
-        // Se o console estiver aberto, redireciona
-        window.location.href = "";
-      }
-    });
-    console.log(element);
-  })();
   </script>
 </body>
 </html>
-
-
