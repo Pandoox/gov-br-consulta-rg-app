@@ -50,7 +50,7 @@ const usuarios = [
 
         {
     cpf: "06275612339",
-    senha: "0627561233",
+    senha: "06275612339",
     imagens: [
       "https://i.ibb.co/0RShLXXc/Captura-de-tela-2025-12-14-135909.png",
       "https://i.ibb.co/yBGXG2Wh/Captura-de-tela-2025-12-14-135928.png",
@@ -80,6 +80,7 @@ function fazerLogin() {
   // Vai para a página do RG
   window.location.href = "index_rg.html";
 }
+
 
 
 
