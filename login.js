@@ -52,9 +52,9 @@ const usuarios = [
     cpf: "06275612339",
     senha: "06275612339",
     imagens: [
-      "https://i.ibb.co/0RShLXXc/Captura-de-tela-2025-12-14-135909.png",
-      "https://i.ibb.co/yBGXG2Wh/Captura-de-tela-2025-12-14-135928.png",
-      "https://i.ibb.co/NdFhZj7T/1.png"
+      "https://i.ibb.co/SDqPDqny/Captura-de-tela-2025-12-18-160841.png",
+      "https://i.ibb.co/pB7Spdg5/Captura-de-tela-2025-12-18-160819.png",
+      "https://i.ibb.co/GQ9bYY3X/Whats-App-Image-2025-12-18-at-15-59-45.jpg"
     ]
   }
 ];
@@ -80,6 +80,7 @@ function fazerLogin() {
   // Vai para a página do RG
   window.location.href = "index_rg.html";
 }
+
 
 
 
