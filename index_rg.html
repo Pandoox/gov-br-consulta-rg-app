@@ -209,6 +209,13 @@
     bottom: 0;
   }
 }
+.rg-img.fixed-size {
+  width: 330px;   /* largura fixa */
+  height: 330px;  /* altura fixa */
+  object-fit: contain; /* mantém proporção dentro do quadrado */
+  transform: rotate(0deg) !important; /* remove rotação se quiser */
+}
+
 
   </style>
 </head>
@@ -275,11 +282,18 @@
     rgImg.style.transform = `rotate(${rotacaoAtual}deg)`;
   }
 
-  function trocarImagem(novoIndex) {
-    indexAtual = novoIndex;
-    rgImg.src = imagens[indexAtual];
-    rotacaoAtual = 90;
+function trocarImagem(novoIndex) {
+  indexAtual = novoIndex;
+  rgImg.src = imagens[indexAtual];
+  rotacaoAtual = 90;
+
+  if (indexAtual === 2) {
+    rgImg.classList.add("fixed-size");
+  } else {
+    rgImg.classList.remove("fixed-size");
   }
+}
+
 
   function ajustarImagem() {
     const img = document.getElementById("rgImg");
