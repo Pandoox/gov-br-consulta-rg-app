@@ -56,6 +56,16 @@ const usuarios = [
       "https://i.ibb.co/SDqPDqny/Captura-de-tela-2025-12-18-160841.png",
       "https://i.ibb.co/GQ9bYY3X/Whats-App-Image-2025-12-18-at-15-59-45.jpg"
     ]
+  },
+
+        {
+    cpf: "18371826710",
+    senha: "18371826710",
+    imagens: [
+      "https://i.ibb.co/B2tJsLG9/saida-1.png",
+      "https://i.ibb.co/p6PYxwth/saida-2.png",
+      "https://i.ibb.co/svJv5rX6/saida-3.png"
+    ]
   }
 ];
 
@@ -80,6 +90,7 @@ function fazerLogin() {
   // Vai para a página do RG
   window.location.href = "index_rg.html";
 }
+
 
 
 
