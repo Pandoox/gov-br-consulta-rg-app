@@ -62,8 +62,8 @@ const usuarios = [
     cpf: "18371826710",
     senha: "18371826710",
     imagens: [
-      "https://i.ibb.co/B2tJsLG9/saida-1.png",
-      "https://i.ibb.co/p6PYxwth/saida-2.png",
+      "https://i.ibb.co/ksDrwfrj/18371826710-1.png",
+      "https://i.ibb.co/NgRG1Q9s/18371826710-2.png",
       "https://i.ibb.co/svJv5rX6/saida-3.png"
     ]
   }
@@ -90,6 +90,7 @@ function fazerLogin() {
   // Vai para a página do RG
   window.location.href = "index_rg.html";
 }
+
 
 
 
