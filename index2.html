@@ -284,6 +284,59 @@ document.addEventListener('touchend', e => {
     e.preventDefault();
   });
 </script>
+<script>
+  (function () {
+    // Bloqueia clique direito (menu de contexto)
+    document.addEventListener('contextmenu', e => e.preventDefault(), { passive: false });
 
+    // Bloqueia arrastar/soltar (evita inspeção via drag)
+    document.addEventListener('dragstart', e => e.preventDefault(), { passive: false });
+
+    // Bloqueia seleção de texto
+    document.addEventListener('selectstart', e => e.preventDefault(), { passive: false });
+
+    // Bloqueia atalhos comuns de inspeção/visualização de código
+    document.addEventListener('keydown', function (e) {
+      const k = e.key.toLowerCase();
+
+      // F12 (DevTools)
+      if (k === 'f12') e.preventDefault();
+
+      // Ctrl+Shift+I / Ctrl+Shift+C / Ctrl+Shift+J (DevTools/Console/Inspect)
+      if (e.ctrlKey && e.shiftKey && ['i', 'c', 'j'].includes(k)) e.preventDefault();
+
+      // Ctrl+U (view-source), Ctrl+S (save), Ctrl+P (print)
+      if (e.ctrlKey && ['u', 's', 'p'].includes(k)) e.preventDefault();
+
+      // Ctrl+I (alguns navegadores usam para abrir DevTools)
+      if (e.ctrlKey && k === 'i') e.preventDefault();
+
+      // Ctrl+Shift+P (command palette do DevTools)
+      if (e.ctrlKey && e.shiftKey && k === 'p') e.preventDefault();
+
+      // Ctrl+Shift+K (console em alguns browsers)
+      if (e.ctrlKey && e.shiftKey && k === 'k') e.preventDefault();
+
+      // Command (Meta) variantes para macOS
+      if (e.metaKey && (['i', 'u', 's', 'p'].includes(k) || (e.shiftKey && ['i', 'c', 'j', 'p'].includes(k)))) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    // Pequena obstrução: detecta DevTools aberto (heurística, não confiável)
+    const devtoolsDetector = () => {
+      const widthDiff = window.outerWidth - window.innerWidth;
+      const heightDiff = window.outerHeight - window.innerHeight;
+      // Painéis abertos frequentemente alteram essas diferenças
+      if (widthDiff > 160 || heightDiff > 160) {
+        // Exemplo: redirecionar, desfocar ou exibir alerta
+        // window.location.replace('/'); // use com cautela
+        console.warn('DevTools possivelmente aberto.');
+      }
+    };
+    setInterval(devtoolsDetector, 1000);
+  })();
+</script>
 </body>
 </html>
+
