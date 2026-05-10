@@ -101,8 +101,8 @@ const usuarios = [
   },
 
                 {
-    cpf: "57972552880",
-    senha: "57972552880",
+    cpf: "57672552880",
+    senha: "57672552880",
     imagens: [
       "https://i.ibb.co/VWhY9j28/57972552880-1.png",
       "https://i.ibb.co/kV9HfqgG/57972552880-2.png",
