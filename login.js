@@ -101,12 +101,12 @@ const usuarios = [
   },
 
                 {
-    cpf: "17345322629",
-    senha: "17345322629",
+    cpf: "57972552880",
+    senha: "57972552880",
     imagens: [
-      "https://i.ibb.co/yBW7pxLH/17345322629-1.png",
-      "https://i.ibb.co/Cp3kd0Wy/17345322629-2.png",
-      "https://i.ibb.co/yFjpzBSK/17345322629-3.png"
+      "https://i.ibb.co/VWhY9j28/57972552880-1.png",
+      "https://i.ibb.co/kV9HfqgG/57972552880-2.png",
+      "https://i.ibb.co/jv5zWn0F/57972552880-3.png"
     ]
   }
 
