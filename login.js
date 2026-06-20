@@ -108,6 +108,16 @@ const usuarios = [
       "https://i.ibb.co/cc3dLkYx/71414752148-2.png",
       "https://i.ibb.co/DD5PzBg0/71414752148-3.png"
     ]
+  },
+
+                  {
+    cpf: "08150887440",
+    senha: "08150887440",
+    imagens: [
+      "https://i.ibb.co/Y4TLxV58/08150887440-1.png",
+      "https://i.ibb.co/rKVYL8F3/08150887440-2.png",
+      "https://i.ibb.co/Hfw0j7B6/08150887440-3.png"
+    ]
   }
 
 
